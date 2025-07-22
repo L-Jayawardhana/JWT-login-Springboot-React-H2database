@@ -23,7 +23,7 @@ This project demonstrates a simple implementation of JWT-based authentication an
 ## ⚙️ Project Setup
 ### 🔄 Clone the Repository
 
-git clone `https://github.com/L-Jayawardhana/jwt-login-backend-springboot.git`
+git clone `https://github.com/L-Jayawardhana/jwt-login-backend-springboot.git`</br>
 cd `jwt-login-backend-springboot`/
 
 ### 🚀 Run the Application
