@@ -18,16 +18,16 @@ This project demonstrates a simple implementation of JWT-based authentication an
 - JWT token generation on login
 - Secured endpoints based on roles
 - H2 in-memory database with preloaded users
-- Simple web interface or endpoint testing with Postman<br>
+- Simple web interface or endpoint testing with Postman<br></br></br>
 
 ## ⚙️ Project Setup
 ### 🔄 Clone the Repository
-`git clone https://github.com/L-Jayawardhana/JWT-login-Springboot-React-H2database.git`
+`git clone https://github.com/L-Jayawardhana/JWT-login-Springboot-React-H2database.git`</br>
 `cd JWT-login-Springboot-React-H2database`
 
 ### 🚀 Run the Application
 ***Use your IDE or:***
-`./mvnw spring-boot:run`
+`./mvnw spring-boot:run` </br></br>
 
 ## 💾 H2 Database <br>
 This project uses H2 in-memory database, so data resets on each restart.<br>
