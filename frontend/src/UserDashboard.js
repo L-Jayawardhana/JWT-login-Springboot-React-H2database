@@ -1,12 +1,12 @@
-
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import LoginPage from './LoginPage';
-import AdminDashboard from './AdminDashboard';
-import UserDashboard from './UserDashboard';
+import { useNavigate } from 'react-router-dom';
 
-function Home() {
+function UserDashboard() {
   const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/');
+  };
   return (
     <div style={{
       minHeight: '100vh',
@@ -23,15 +23,15 @@ function Home() {
         minWidth: '320px',
         textAlign: 'center',
       }}>
-        <h1 style={{ color: '#6a11cb', marginBottom: '24px', fontWeight: 700, letterSpacing: '1px' }}>JWT Login App</h1>
+        <h2 style={{ color: '#6a11cb', marginBottom: '24px', fontWeight: 700, letterSpacing: '1px' }}>Hello User!</h2>
         <p style={{ color: '#2575fc', fontSize: '18px', marginBottom: '32px', fontWeight: 500 }}>
-          Secure login for Admins and Users
+          Welcome to the User Dashboard.
         </p>
         <button
-          onClick={() => navigate('/login')}
+          onClick={handleLogout}
           style={{
             width: '100%',
-            padding: '14px',
+            padding: '12px',
             borderRadius: '8px',
             border: 'none',
             background: 'linear-gradient(90deg, #2575fc 0%, #6a11cb 100%)',
@@ -44,28 +44,11 @@ function Home() {
             transition: 'background 0.2s',
           }}
         >
-          Login
+          Logout
         </button>
       </div>
     </div>
   );
 }
 
-// ...existing code...
-
-// ...existing code...
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/user" element={<UserDashboard />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+export default UserDashboard;
