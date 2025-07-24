@@ -73,11 +73,30 @@ Accessible by USER and ADMIN : `GET http://localhost:8080/hello/user`
 Accessible by ALL : `GET http://localhost:8080/hello/all`<br></br></br></br>
 
 ## 🌐 Testing via Browser (if applicable)
-If you’ve enabled any simple frontend or web views:<br>
-Main Page                      : `http://localhost:8080`<br>
-Login Page                     : `http://localhost:8080/login`<br>
-Admin Panel (secured)          : `http://localhost:8080/admin`<br>
-User Profile (secured)         : `http://localhost:8080/user`</br></br>
+### ▶️ How to Run the Frontend
+1.Navigate to the frontend folder:
+</br>
+`cd frontend`
+</br></br>
+2.Install dependencies:
+</br>
+`npm install`
+</br></br>
+3.Start the development server:
+</br>
+`npm start`
+</br></br>
+
+The app will run at: 
+`http://localhost:3000` 
+</br>
+**Make sure your backend is running on `http://localhost:8080` for the API calls to work properly.**
+
+
+Main Page                      : `http://localhost:3000`<br>
+Login Page                     : `http://localhost:3000/login`<br>
+Admin Panel (secured)          : `http://localhost:3000/admin`<br>
+User Profile (secured)         : `http://localhost:3000/user`</br></br>
 
 ### 📁 Default User Credentials (from H2 preload)
 | Username | Password | Role  |
@@ -85,14 +104,6 @@ User Profile (secured)         : `http://localhost:8080/user`</br></br>
 | admin    | admin123 | ADMIN |
 | user     | user123  | USER  |
 (You can modify these in your schema.sql file)</br></br>
-
-### 📎 Useful Endpoints Summary
-| Method | Endpoint               | Description        | Role Required |
-| ------ | ---------------------- | ------------------ | ------------- |
-| POST   | `/api/auth/login`      | Authenticate user  | Public        |
-| GET    | `/api/user/profile`    | User info          | USER/ADMIN    |
-| GET    | `/api/admin/dashboard` | Admin-only section | ADMIN         |</br></br>
-
 
 ### 📝 License 
 This project is licensed under the MIT License.
